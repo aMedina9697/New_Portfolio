@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:doc="http://xsltsl.org/xsl/documentation/1.0" xmlns:dt="http://xsltsl.org/date-time" xmlns:str="http://xsltsl.org/string" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <title>AlexandraMedina</title>
+    <style type="text/css" id="static">
+        html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+        a img{border:none}
+
+        /*START content disc style for LI*/
+        div#document ul,div#document li{list-style:none;margin:0 0 0 8px;padding:0}
+        div#document ul li{position:relative;margin:0 0 0 5px}
+        div#document ul li:before{content:'\25CF\0020';position:absolute;left:-13px;top:0}
+        /*END content disc style for LI*/
+
+        /*START Image treatment for LI
+        div#document ul{list-style-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNJREFUeNpiYCAAtIB4OxDfAOIoZIm9QPwfiv8AMT8TVOIvLqMMgPgqEL8F4ky8lgIEGAC+Fgk0YKVkbwAAAABJRU5ErkJggg==")}
+        div#document ul,div#document li{margin:0 0 0 3px;padding:0}
+        div#document ul li{margin:0 0 0 11px;padding:0 0 0 3px}
+        END Image treatment for LI*/
+
+        .clear{clear:both;height:0}
+        br.clear{line-height:0}
+        table{border-collapse:collapse;border-spacing:0}
+        table.skills,.table_wrapper{width:100%;margin-top:0}
+        table.skills th,table.skills td{width:20%;text-align:center}
+        table.skills th{text-decoration:underline}
+        table.skills .skillname,table.skills .skillrating{text-align:left;width:35%}
+        table.skills .skillrating{width:20%}
+        table.skills .skillyears,table.skills .skilllast{width:19%}
+        table.skills .pad1{width:5%}
+        table.skills .pad2,table.skills .pad3{width:1%}
+        .paddedline{display:block}
+        #document{color:#4a4a4a;line-height:16px;font-variant-ligatures:none}
+        div#document .parentContainer{display:table;width:100%;border-collapse:collapse}
+        div.heading{padding-bottom:10px;font-weight:bold;font-size:18px}
+        .left-box{padding:0 15px 0 10px;display:table-cell;overflow:hidden}
+        .right-box{background-color:#f5f5f5;padding:0 15px;display:table-cell;vertical-align:top}
+        div#document div.firstsection{border:none;background-color:#3c5769;color:#fff}
+        div#document .left-box .section,div#document .right-box .section{border-top:1px solid #c4c4c4}
+        /*div#document .right-box .section{border-top-color:#9b9b9b}*/
+        .left-box div.section:first-child,.right-box div.section:first-child{border:none!important}
+        .monogram{text-align:center}
+        .monogram svg{margin-top:20px; text-transform:uppercase;}
+        .name{font-size:30px;line-height:28px;font-weight:700;text-align:center;padding-bottom:5px;letter-spacing:1.5px}
+        .name,div.sectiontitle{font-family:"Georgia, serif";font-style:italic}
+        div.sectiontitle{letter-spacing:.5px}
+        .txtBold{font-weight:bold}
+        .txtItl{font-style:italic}
+        div#document .jobline ul{margin-top:3px}
+        div#document .address,div#document .adnlLnks{word-break:break-all;word-break:break-word;} /* break-all for Firefox */
+    </style>
+    <style type="text/css" id="unparsed">
+        div#document{line-height:{$FTLH}px}
+        div#document table{line-height:{$FTLH}px}
+        div#document.pagesize{width:{$DOCW}px}
+        div#document.vmargins{padding-top:{$TBMR}px;padding-bottom:{$TBMR}px}
+        div#document.hmargins{padding-left:{$LRMR}px;padding-right:{$LRMR}px}
+        div#document .section{padding-top:{$SCSP}px;margin-bottom:{$SCSP}px}
+        div#document div.firstsection{padding-top:0!important;background-color:{$SDCL};margin-bottom:0!important}
+        div#document div.sectiontitle{font-size:{$HDSZ}px;line-height:{$HDLH}px}
+        div#document div.paragraph{margin-top:{$PSPC}px}
+        div#document div.firstparagraph{margin-top:0}
+        div#document .singlecolumn,div#document .maincolumn{margin-left:{$PIND}px}
+        div#document table.skills td{padding-top:{$TDMT}px}
+        .fontsize{font-size:{$FTSZ}px}
+        .fontface{font-family:{$FTFC}}
+        div.name{font-size:{$NMSZ}px;line-height:{$NMLH}px}
+        div.address{font-size:{$CISZ}px;line-height:{$CILH}px}
+        div.address2{font-size:{$FTSZ}px;line-height:{$FTLH}px}
+        .left-box{width:{$LBOX}px}
+    </style>
+    <style type="text/css" id="dynamic">
+        div#document{line-height:17px}
+        div#document table{line-height:17px}
+        div#document.pagesize{width:576px}
+        div#document.vmargins{padding-top:18px;padding-bottom:18px}
+        div#document.hmargins{padding-left:18px;padding-right:18px}
+        div#document .section{padding-top:25px;margin-bottom:25px}
+        div#document div.firstsection{padding-top:0!important;background-color:#3c5769;margin-bottom:0!important}
+        div#document div.sectiontitle{font-size:13px;line-height:18px}
+        div#document div.paragraph{margin-top:10px}
+        div#document div.firstparagraph{margin-top:0}
+        div#document .singlecolumn,div#document .maincolumn{margin-left:0px}
+        div#document table.skills td{padding-top:5px}
+        .fontsize{font-size:12px}
+        .fontface{font-family:"Palatino Linotype", Palatino, serif}
+        div.name{font-size:28px;line-height:48px}
+        div.address{font-size:12px;line-height:17px}
+        div.address2{font-size:12px;line-height:17px}
+        .left-box{width:331px}
+    </style>
+  </head>
+  <body>
+    <div id="document" class="fontsize fontface vmargins hmargins linespacing pagesize">
+      <div class="" id="CONTAINER_PARENT_0">
+        <div class="" id="CONTAINER_0">
+          <div class="section notdraggable firstsection" id="SECTION_NAME1145c9f8-a79a-4e6e-917b-88f694e6a7fc">
+            <div id="PARAGRAPH_1145c9f8-a79a-4e6e-917b-88f694e6a7fc_1" class="paragraph PARAGRAPH_NAME firstparagraph">
+                        <div class="monogram">
+                            <svg width="40px" height="40px">
+                                <rect x="0px" y="0px" width="40px" height="40px" stroke="#ffffff" fill="none" stroke-width="1px"></rect>
+                                <text text-anchor="middle" x="20px" y="26px" fill="#ffffff" font-size="19px" id="1145c9f8-a79a-4e6e-917b-88f694e6a7fcSUBSTR_FALN1">AM</text>
+                            </svg>
+                        </div>
+                        <div class="name">
+                            <span class="field" dependency="FNAM" id="1145c9f8-a79a-4e6e-917b-88f694e6a7fcFNAM1">Alexandra</span>
+                            <span class="field" dependency="LNAM" id="1145c9f8-a79a-4e6e-917b-88f694e6a7fcLNAM1">Medina</span>
+                        </div>
+                    </div>
+          </div>
+        </div>
+      </div>
+      <div class="parentContainer" id="CONTAINER_PARENT_1">
+        <div class="left-box last-box" id="CONTAINER_1">
+          <div class="section" id="SECTION_SUMM026ff76d-3a66-47c9-b790-b37dffffa3e9">
+            <div class="heading">
+                        <div id="SECTNAME_SUMM026ff76d-3a66-47c9-b790-b37dffffa3e9" class="sectiontitle">Professional Summary</div>
+                    </div>
+            <div id="PARAGRAPH_026ff76d-3a66-47c9-b790-b37dffffa3e9_1" class="paragraph firstparagraph">
+                        <div class="field singlecolumn" id="026ff76d-3a66-47c9-b790-b37dffffa3e9FRFM1"><p>Goal-driven web developer who has successfully completed numerous and lucrative projects. Possesses ambitious problem-solving skills for both the front &amp; back end side of programming. Continually expanding a powerful set of technology skills. Looking for an opportunity to work for a well-established organization that appreciates dedication and hard work.</p></div>
+                    </div>
+          </div>
+          <div class="section" id="SECTION_EXPRee078daf-054d-44d0-8b5f-8252da798610">
+            <div class="heading">
+                        <div id="SECTNAME_EXPRee078daf-054d-44d0-8b5f-8252da798610" class="sectiontitle">Work History</div>
+                    </div>
+            <div id="PARAGRAPH_ee078daf-054d-44d0-8b5f-8252da798610_1" class="paragraph firstparagraph">
+                        <div class="singlecolumn">
+                            <span class="paddedline">
+                                <span class="companyname txtBold" id="ee078daf-054d-44d0-8b5f-8252da798610COMP1">Orangetheory Fitness Lincoln Park</span><span> - </span>
+                                <span class="jobtitle txtBold" id="ee078daf-054d-44d0-8b5f-8252da798610JTIT1">Sales Consultant</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="joblocation jobcity" id="ee078daf-054d-44d0-8b5f-8252da798610JCIT1">Chicago</span><span>, </span>
+                                <span class="joblocation jobstate" id="ee078daf-054d-44d0-8b5f-8252da798610JSTA1">IL</span>
+                            </span>
+                            <span class="paddedline txtItl">
+                                <span class="jobdates" format="%m/%Y" id="ee078daf-054d-44d0-8b5f-8252da798610JSTD1">06/2016</span><span> - </span><span class="jobdates" format="%m/%Y" id="ee078daf-054d-44d0-8b5f-8252da798610EDDT1">Current</span>
+                            </span>
+                            <span class="jobline" id="ee078daf-054d-44d0-8b5f-8252da798610JDES1"><ul >   <li > Maintained accurate records using established OTF sales systems </li>  <li > Accurately followed the daily studio cleaning checklist ( pre/during/post ) shift activities </li>  <li > Participated in 1-2 OTF scheduled workouts per week </li>  <li > Held responsibility for processing accurate cash and credit card transactions. </li>  <li > Responded immediately to member requests, inquiries and concerns </li>  <li > Performed proper on-boarding all OTF clients through the use of Client Intake Forms and FP Agreements </li> </ul></span>
+                        </div>
+                    </div>
+            <div id="PARAGRAPH_ee078daf-054d-44d0-8b5f-8252da798610_2" class="paragraph">
+                        <div class="singlecolumn">
+                            <span class="paddedline">
+                                <span class="companyname txtBold" id="ee078daf-054d-44d0-8b5f-8252da798610COMP2">Principal Marketing</span><span> - </span>
+                                <span class="jobtitle txtBold" id="ee078daf-054d-44d0-8b5f-8252da798610JTIT2">Sales Representative</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="joblocation jobcity" id="ee078daf-054d-44d0-8b5f-8252da798610JCIT2">Glen Ellyn</span><span>, </span>
+                                <span class="joblocation jobstate" id="ee078daf-054d-44d0-8b5f-8252da798610JSTA2">IL</span>
+                            </span>
+                            <span class="paddedline txtItl">
+                                <span class="jobdates" format="%m/%Y" id="ee078daf-054d-44d0-8b5f-8252da798610JSTD2">01/2017</span><span> - </span><span class="jobdates" format="%m/%Y" id="ee078daf-054d-44d0-8b5f-8252da798610EDDT2">03/2017</span>
+                            </span>
+                            <span class="jobline" id="ee078daf-054d-44d0-8b5f-8252da798610JDES2"><ul >   <li > Initiated, maintained and served all business partnerships and client relationships. </li>  <li > Innovated and executed effective campaigns to help target audiences for our clients. </li> </ul></span>
+                        </div>
+                    </div>
+          </div>
+          <div class="section" id="SECTION_CUSTff97b587-e101-4e09-8b21-c67640f39ad7">
+            <div class="heading">
+                        <div id="SECTNAME_CUSTff97b587-e101-4e09-8b21-c67640f39ad7" class="sectiontitle">Personal Skills</div>
+                    </div>
+            <div id="PARAGRAPH_ff97b587-e101-4e09-8b21-c67640f39ad7_1" class="paragraph firstparagraph">
+                        <div class="field singlecolumn" id="ff97b587-e101-4e09-8b21-c67640f39ad7FRFM1"><ul>
+  <li>Ability to communicate advanced concepts</li>
+  <li>Time management</li>
+  <li>Good team player</li>
+  <li>Problem solving</li>
+  <li>Analytical</li>
+</ul></div>
+                    </div>
+          </div>
+          <div class="section" id="SECTION_CUSTdaea0ee2-4c95-4daa-926a-ac16056f84f0">
+            <div class="heading">
+                        <div id="SECTNAME_CUSTdaea0ee2-4c95-4daa-926a-ac16056f84f0" class="sectiontitle">Hobbies</div>
+                    </div>
+            <div id="PARAGRAPH_daea0ee2-4c95-4daa-926a-ac16056f84f0_1" class="paragraph firstparagraph">
+                        <div class="field singlecolumn" id="daea0ee2-4c95-4daa-926a-ac16056f84f0FRFM1"><ul>
+  <li>Reading self-help or philosophy books by authors like Tony Robbins and Alan Watts.</li>
+  <li>Traveling to other states to attend educational seminars like Ted Talks or other informative conferences.</li>
+  <li>Exercising with friends.</li>
+  <li>Playing video games with younger siblings.</li>
+</ul></div>
+                    </div>
+          </div>
+          <div class="section" id="SECTION_CUSTa2756292-dd32-4dec-8233-eef25900a033">
+            <div class="heading">
+                        <div id="SECTNAME_CUSTa2756292-dd32-4dec-8233-eef25900a033" class="sectiontitle">References</div>
+                    </div>
+            <div id="PARAGRAPH_a2756292-dd32-4dec-8233-eef25900a033_1" class="paragraph firstparagraph">
+                        <div class="field singlecolumn" id="a2756292-dd32-4dec-8233-eef25900a033FRFM1"><p > Available upon request. </p></div>
+                    </div>
+          </div>
+        </div>
+        <div class="right-box last-box" id="CONTAINER_2">
+          <div class="section SECTION_CNTC notdraggable" id="SECTION_CNTC892e2fef-2bac-4693-b3b3-41044c96dfcb">
+            <div id="PARAGRAPH_892e2fef-2bac-4693-b3b3-41044c96dfcb_1" class="paragraph PARAGRAPH_CNTC firstparagraph">
+                        <div class="address">
+                            <span class="paddedline">
+                                <span class="field" id="892e2fef-2bac-4693-b3b3-41044c96dfcbEMAI1">asm33@sbcglobal.net</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="field" id="892e2fef-2bac-4693-b3b3-41044c96dfcbHPHN1">(773) 208-1512</span>
+                            </span>
+                            
+                            <span class="paddedline">
+                                <span class="field" id="892e2fef-2bac-4693-b3b3-41044c96dfcbSTRT1">4111 N LeClaire Ave</span><span>, </span>
+                                <span class="field" id="892e2fef-2bac-4693-b3b3-41044c96dfcbCITY1">Chicago</span><span>, </span>
+                                <span class="field" id="892e2fef-2bac-4693-b3b3-41044c96dfcbSTAT1">Illinois</span>
+                                <span class="field" id="892e2fef-2bac-4693-b3b3-41044c96dfcbZIPC1">60641</span>
+                            </span>
+                        </div>
+                    </div>
+          </div>
+          <div class="section notdraggable" id="SECTION_ALNKb5541832-24fe-43c5-b792-3afa672f8dcd">
+            <div id="PARAGRAPH_b5541832-24fe-43c5-b792-3afa672f8dcd_1" class="paragraph firstparagraph">
+                        <div class="adnlLnks singlecolumn">
+                            <ul>
+                                <li class="first"><span class="field" id="b5541832-24fe-43c5-b792-3afa672f8dcdLNK11"></span></li>
+                                <li><span class="field" id="b5541832-24fe-43c5-b792-3afa672f8dcdLNK21">https://github.com/aMedina9697</span></li>
+                                <li><span class="field" id="b5541832-24fe-43c5-b792-3afa672f8dcdLNK31">https://www.linkedin.com/in/alexandra-medina-a19328110</span></li>
+                            </ul>
+                        </div>
+                    </div>
+          </div>
+          <div class="section" id="SECTION_HILTba18600b-ff5e-45af-a69b-5289350b9ac5">
+            <div class="heading">
+                        <div id="SECTNAME_HILTba18600b-ff5e-45af-a69b-5289350b9ac5" class="sectiontitle">Technical Proficiencies</div>
+                    </div>
+            <div id="PARAGRAPH_ba18600b-ff5e-45af-a69b-5289350b9ac5_1" class="paragraph firstparagraph">
+                        <div class="singlecolumn maincolumn">
+                            <span class="paddedline" id="ba18600b-ff5e-45af-a69b-5289350b9ac5SKC11"><p > <em > HTML5 </em> </p><p > <em > React.js </em> </p><p > <em > Express.js </em> </p><p > <em > CSS3 </em> </p><p > <em > PHP </em> </p><p > <em > Bootstrap </em> </p><p > <em > Node.js </em> </p><p > <em > Database theory </em> </p></span>
+                            <span class="paddedline" id="ba18600b-ff5e-45af-a69b-5289350b9ac5SKC21"><p > <em > Sql </em> </p><p > <em > JavaScript </em> </p><p > <em > Bookshelf.js </em> </p><p > <em > MongoDB </em> </p><p > <em > Command line/Git </em> </p><p > <em > Python </em> </p><p > <em > JQuery </em> </p></span>
+                        </div>
+                    </div>
+          </div>
+          <div class="section" id="SECTION_EDUCd1979919-b473-4612-b46d-8448bdf1a856">
+            <div class="heading">
+                        <div id="SECTNAME_EDUCd1979919-b473-4612-b46d-8448bdf1a856" class="sectiontitle">Education</div>
+                    </div>
+            <div id="PARAGRAPH_d1979919-b473-4612-b46d-8448bdf1a856_1" class="paragraph firstparagraph">
+                        <div class="singlecolumn">
+                            
+                            <span class="paddedline">
+                                <span class="companyname txtBold" id="d1979919-b473-4612-b46d-8448bdf1a856SCHO1">Some College  | Loyola University</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="joblocation jobcity" id="d1979919-b473-4612-b46d-8448bdf1a856SCIT1">Chicago</span><span>, </span>
+                                <span class="joblocation jobstate" id="d1979919-b473-4612-b46d-8448bdf1a856SSTA1">IL</span>
+                            </span>
+                            
+                            <span class="field" id="d1979919-b473-4612-b46d-8448bdf1a856FRFM1"></span>
+                        </div>
+                    </div>
+            <div id="PARAGRAPH_d1979919-b473-4612-b46d-8448bdf1a856_2" class="paragraph">
+                        <div class="singlecolumn">
+                            
+                            <span class="paddedline">
+                                <span class="companyname txtBold" id="d1979919-b473-4612-b46d-8448bdf1a856SCHO2">City Colleges Of Chicago - Wilbur Wright College</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="joblocation jobcity" id="d1979919-b473-4612-b46d-8448bdf1a856SCIT2">Chicago</span><span>, </span>
+                                <span class="joblocation jobstate" id="d1979919-b473-4612-b46d-8448bdf1a856SSTA2">IL</span>
+                            </span>
+                            
+                            <span class="field" id="d1979919-b473-4612-b46d-8448bdf1a856FRFM2"><p > I'm currently studying to obtain my Associate's degree in Computer Science at Wright. </p></span>
+                        </div>
+                    </div>
+            <div id="PARAGRAPH_d1979919-b473-4612-b46d-8448bdf1a856_3" class="paragraph">
+                        <div class="singlecolumn">
+                            
+                            <span class="paddedline">
+                                <span class="companyname txtBold" id="d1979919-b473-4612-b46d-8448bdf1a856SCHO3">Northwestern University</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="joblocation jobcity" id="d1979919-b473-4612-b46d-8448bdf1a856SCIT3">Chicago</span><span>, </span>
+                                <span class="joblocation jobstate" id="d1979919-b473-4612-b46d-8448bdf1a856SSTA3">IL</span>
+                            </span>
+                            
+                            <span class="field" id="d1979919-b473-4612-b46d-8448bdf1a856FRFM3"><p > I am currently enrolled in Northwestern' s 6-month coding boot-camp. In this boot-camp, I am learning market-driven skills: HTML5, CSS3, JavaScript, jQuery, Bootstrap, Express.js, React.js, Node.js, Database Theory, Bookshelf.js, MongoDB, MySQL, Command Line, Git and Python. I have a portfolio of web applications to showcase my knowledge. This program is offered through the Northwestern School of Professional Studies in collaboration with Trilogy Education Services Inc. </p></span>
+                        </div>
+                    </div>
+          </div>
+          <div class="section" id="SECTION_CERTec9d5cb6-80f5-43e6-a525-15efe0b2e709">
+            <div class="heading">
+                        <div id="SECTNAME_CERTec9d5cb6-80f5-43e6-a525-15efe0b2e709" class="sectiontitle">Certifications</div>
+                    </div>
+            <div id="PARAGRAPH_ec9d5cb6-80f5-43e6-a525-15efe0b2e709_1" class="paragraph firstparagraph">
+                        <div class="field singlecolumn" id="ec9d5cb6-80f5-43e6-a525-15efe0b2e709FRFM1"><p > Full Stack Developer certification </p></div>
+                    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
